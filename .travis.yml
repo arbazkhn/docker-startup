@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker build -t  arbazkhn / docker-startup -f Dockerfile.dev
+
+scripts:
+  - docker run  arbazkhn / docker-startup npm run test -- --coverage
+
